@@ -1,0 +1,57 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="topbar" role="navigation" aria-label="Navegación secundaria">
+        <a href="#">Dashboard</a>
+        <a href="#">Productos</a>
+        <a href="#">Clases</a>
+        <a href="#">Perfil</a>
+    </div>
+    
+    <section class="hero">
+        <h1>The power to create what you imagine.</h1>
+        <p class="hero-sub">
+            Únete a FrameffX para hacer realidad tus ediciones de ensueño.
+        </p>
+    </section>
+    
+    <div class="login">
+        <div class="login-box" aria-labelledby="login-title">
+            <h1 id="login-title">Bienvenido a FrameffX</h1>
+    
+            <form method="post" novalidate>
+                {% csrf_token %}
+    
+                <div class="form-field">
+                    <label for="id_username">Email</label>
+                    <input
+                        id="id_username"
+                        name="username"
+                        type="email"
+                        placeholder="correo@ejemplo.com"
+                        required
+                        autocomplete="email"
+                    >
+                </div>
+    
+                <div class="form-field">
+                    <label for="id_password">Contraseña</label>
+                    <input
+                        id="id_password"
+                        name="password"
+                        type="password"
+                        placeholder="Contraseña"
+                        required
+                        autocomplete="current-password"
+                    >
+                </div>
+    
+                <button type="submit" class="submit-btn">
+                    Entrar
+                </button>
+            </form>
+        </div>
+    </div>    
+
+{% endblock %}

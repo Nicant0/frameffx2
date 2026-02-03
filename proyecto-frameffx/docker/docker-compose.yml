@@ -1,0 +1,9 @@
+services:
+  web:
+    volumes:
+      - static_volume:/code/static
+      - media_volume:/code/media
+
+volumes:
+  static_volume:
+  media_volume:
