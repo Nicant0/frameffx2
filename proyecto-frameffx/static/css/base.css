@@ -1,0 +1,270 @@
+/* =========================
+   RESET & BASE
+========================= */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background-image: url(/static/img/Diseñox.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    color: #EAF1F5;
+  }
+  
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  
+  /* =========================
+     HEADER
+  ========================= */
+  
+  .header {
+    background: #0E1924;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+  }
+  
+  .logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    height: 38px;
+    width: auto;
+    display: block;
+  }
+  
+  .nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #EAF1F5;
+    font-size: 14px;
+  }
+  
+  .nav a:hover {
+    color: #07D6C4;
+  }
+  
+  /* =========================
+     MAIN CONTENT
+  ========================= */
+  
+  .content {
+    padding: 30px;
+    min-height: calc(100vh - 120px);
+  }
+  
+  /* =========================
+     HERO / HOME
+  ========================= */
+  
+  .hero {
+    text-align: center;
+    padding: 36px 16px;
+    margin-bottom: 10px;
+  }
+  
+  .hero h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #EAF1F5;
+  }
+  
+  .hero-sub {
+    margin-top: 8px;
+    color: rgba(234,241,245,0.75);
+  }
+  
+  /* =========================
+     GRID & CARDS
+  ========================= */
+  
+  .grid {
+    margin: 18px 0 30px 0;
+    font-size: 0;
+  }
+  
+  .card {
+    background: #1E2E3A;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    display: inline-block;
+    width: calc(50% - 16px);
+    margin: 8px;
+    vertical-align: top;
+    font-size: 16px;
+  }
+  
+  .card.small {
+    width: calc(50% - 10px);
+    margin: 5px;
+  }
+  
+  .card.wide {
+    width: calc(100% - 16px);
+  }
+  
+  .card h2 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #EAF1F5;
+  }
+  
+  .stat-title {
+    color: rgba(234,241,245,0.7);
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  
+  .stat-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: #00C1B3;
+    margin-top: 6px;
+  }
+  
+  /* =========================
+     FORMS (LOGIN / CRUD)
+  ========================= */
+  
+  .form-box {
+    background: #1E2E3A;
+    padding: 24px 28px;
+    border-radius: 10px;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.45);
+    max-width: 500px;
+  }
+  
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+  }
+  
+  .form-field label {
+    font-size: 13px;
+    color: rgba(234,241,245,0.75);
+    margin-bottom: 4px;
+  }
+  
+  .form-field input,
+  .form-field textarea {
+    padding: 10px 12px;
+    font-size: 14px;
+    background: #0E1924;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 6px;
+    color: #EAF1F5;
+  }
+  
+  .form-field input::placeholder,
+  .form-field textarea::placeholder {
+    color: rgba(234,241,245,0.45);
+  }
+  
+  .form-field textarea {
+    resize: vertical;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 11px 12px;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    background: #00C1B3;
+    color: #07121F;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background: #07D6C4;
+  }
+  
+  /* =========================
+     LOGIN
+  ========================= */
+  
+  .login {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .login-box {
+    width: 360px;
+    background: #1E2E3A;
+    border-radius: 10px;
+    padding: 28px;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.45);
+  }
+  
+  .login-box h1 {
+    margin-bottom: 16px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  /* =========================
+     ERRORS
+  ========================= */
+  
+  .error-box h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .error-text {
+    text-align: center;
+    color: rgba(234,241,245,0.75);
+    font-size: 14px;
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+  
+  /* =========================
+     TABLES & LISTS
+  ========================= */
+  
+  .simple-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: rgba(234,241,245,0.95);
+    font-size: 13px;
+  }
+  
+  .simple-table th,
+  .simple-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    text-align: left;
+  }
+  
+  /* =========================
+     FOOTER
+  ========================= */
+  
+  .footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 15px;
+    background: #0E1924;
+    color: #EAF1F5;
+    font-size: 13px;
+  }
