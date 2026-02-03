@@ -37,8 +37,5 @@ COPY . .
 
 EXPOSE 8000
 
-# Copy entrypoint script
-RUN chmod +x /code/docker/entrypoint.sh
-
-# Use entrypoint to handle migrations before gunicorn
-ENTRYPOINT ["/code/docker/entrypoint.sh"]
+# Use sh to execute entrypoint script to avoid permission issues
+ENTRYPOINT ["/bin/sh", "/code/docker/entrypoint.sh"]
