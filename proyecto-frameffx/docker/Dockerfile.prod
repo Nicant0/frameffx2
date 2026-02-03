@@ -37,4 +37,8 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["gunicorn", "FrameffX.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "4"]
+# Copy entrypoint script
+RUN chmod +x /code/docker/entrypoint.sh
+
+# Use entrypoint to handle migrations before gunicorn
+ENTRYPOINT ["/code/docker/entrypoint.sh"]
