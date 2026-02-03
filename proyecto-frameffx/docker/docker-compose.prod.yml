@@ -62,6 +62,7 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/django.conf:/etc/nginx/conf.d/django.conf:ro
+      - /dev/null:/etc/nginx/conf.d/default.conf
       - static_volume:/code/static:ro
       - media_volume:/code/media:ro
       - ./certbot/conf:/etc/letsencrypt:ro
