@@ -35,9 +35,6 @@ ENV PATH=/root/.local/bin:$PATH
 
 COPY . .
 
-# Asegurar que el entrypoint es ejecutable
-RUN chmod +x /code/docker/entrypoint.sh
-
 EXPOSE 8000
 
-ENTRYPOINT ["/code/docker/entrypoint.sh"]
+CMD ["gunicorn", "FrameffX.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "4"]
