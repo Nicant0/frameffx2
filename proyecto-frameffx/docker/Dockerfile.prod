@@ -35,10 +35,9 @@ ENV PATH=/root/.local/bin:$PATH
 
 COPY . .
 
-# Copy entrypoint script
-COPY docker/entrypoint.sh /code/
-RUN chmod +x /code/entrypoint.sh
+# Asegurar que el entrypoint es ejecutable
+RUN chmod +x /code/docker/entrypoint.sh
 
 EXPOSE 8000
 
-ENTRYPOINT ["/code/entrypoint.sh"]
+ENTRYPOINT ["/code/docker/entrypoint.sh"]
